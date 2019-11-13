@@ -1,11 +1,7 @@
 <template>
-  <div>
     <TabCard :items="items">
     </TabCard>
-  </div>
 </template>
-
-
 <script>
 import TabCard from './components/TabCard';
 import Electricity from './components/Electricity';
@@ -39,7 +35,6 @@ export default{
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   padding: 0;

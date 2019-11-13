@@ -7,6 +7,6 @@
 </template>
 <script>
 export default{
-  Name:'Cooker'
+  name:'Cooker',
 };
 </script>

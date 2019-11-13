@@ -3,17 +3,16 @@
     <div class="me">
 <img src="../assets/gryff.png" style="width:25px;height:25px">
  </div>
-  <TabCard :items="items">
-  </TabCard>
+<TabCard :items="items">
+</TabCard>
 </div>
 </template>
-
 <script>
 import TabCard from './TabCard';
 import James from './James';
 import Lilly from './Lilly';
 export default{
-  Name:'Electricity',
+  name:'Electricity',
   components:{
     TabCard,
     James,
@@ -34,6 +33,6 @@ export default{
 tabtitle:'James'}
 ]
 };
-}
+},
 };
 </script>

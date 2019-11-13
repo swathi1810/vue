@@ -7,6 +7,6 @@
 </template>
 <script>
 export default{
-  Name:'Lilly'
+  name:'Lilly',
 };
 </script>

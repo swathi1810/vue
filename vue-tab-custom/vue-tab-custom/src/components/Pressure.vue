@@ -7,6 +7,6 @@
 </template>
 <script>
 export default{
- Name:'Pressure'
+ name:'Pressure',
 };
 </script>
