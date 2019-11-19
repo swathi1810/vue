@@ -1,0 +1,21 @@
+@mixin yo(){
+  max-width: 980px;
+  height: 1200px;
+  position: relative;
+}
+
+@mixin me(){
+  width: 380px;
+  float: left;
+  padding-top: 10px;
+}
+
+@mixin geek(){
+  background-color: #6d32a8;
+  width: 590px;
+  height: 800px;
+  border-radius: 1px;
+  float: right;
+  border:0;
+  padding-left: 0px;
+}

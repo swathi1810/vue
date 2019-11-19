@@ -1,6 +1,8 @@
 <template>
-    <TabCard :items="items">
+  <div class="card">
+    <TabCard :items="items" :show="show">
     </TabCard>
+  </div>
 </template>
 <script>
 import TabCard from './components/TabCard';
@@ -18,15 +20,16 @@ export default{
          key:'elec',
          component:Electricity,
          tabtitle:'Electricity',
-         icon:`<i class="fas fa-burn"></i>`
+         icon:'<i class="far fa-lightbulb"></i>'
        },
        {
          key:'gas',
          component:Gas,
          tabtitle:'Gas',
-         icon:`<i class="fas fa-angle-double-up"></i>`
+         icon:'<i class="fas fa-burn"></i>'
        }
-     ]
+     ],
+     show:true
     };
   }
 };
@@ -43,6 +46,13 @@ body {
   display: grid;
   place-items: center;
   font-family: 'Roboto', sans-serif;
+}
+.card {
+  background-color: #fff;
+  width: 980px;
+  height: 1280px;
+  border-radius: 6px;
+  box-shadow: 2px 0px 30px 0 rgba(0, 0, 0, 0.14);
 }
 
 #app {

@@ -9,13 +9,14 @@
   </main>
 </template>
 <script>
-import Gas from './Gas';
-import Electricity from './Electricity';
+//import Gas from './Gas';
+//import Electricity from './Electricity';
 export default{
   name:'cardbody',
+  //Prevents Circular References
   compoents:{
-    Electricity,
-    Gas
+    Electricity:() => import('./Electricity'),
+    Gas:() => import('./Gas')
   },
   props:{
     subTab:String,

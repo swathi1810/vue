@@ -10,6 +10,7 @@
   "dependencies": {
     "@vue/cli": "^4.0.5",
     "core-js": "^3.3.2",
+    "sass-loader": "^8.0.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {

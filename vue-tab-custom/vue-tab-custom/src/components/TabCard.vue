@@ -1,11 +1,12 @@
 <template>
-  <div class="card">
-    <header class="card-header">
+  <div>
+    <header v-bind:class="changeHeader">
       <div class="Head">
-        <div class="Heading">
-          <p>Something</p>
+        <div v-if="show" class="Heading">
+          <h2>HOW TO READ YOUR BILL</h2>
+          <p> Blah blah ...blah</p>
           </div>
-          <ulcomponent :items="items" :activeTab="activeTab" @changeTitle="changeTitle">
+          <ulcomponent :items="items" :activeTab="activeTab" @changeTitle="changeTitle" :show="show">
           </ulcomponent>
     </div>
     </header>
@@ -20,17 +21,21 @@ export default{
   name:'TabCard',
   components:{
     ulcomponent,
-    cardbody
+    cardbody,
   },
   props:{
     items:{
       type:Array,
       default:() =>[]
+    },
+    show:{
+      type:Boolean
     }
   },
   data(){
 return{
-      activeTab:this.items[0].tabtitle
+      activeTab:this.items[0].tabtitle,
+      getMe:this.show
     };
   },
   methods:{
@@ -38,7 +43,12 @@ return{
     this.activeTab=tabName;
   }
 },
+computed:{
+  changeHeader:function(){
+    return this.getMe ? 'card-header' : 'card-header1';
+  }
 }
+};
 </script>
 <style>
 .Heading{
@@ -54,25 +64,22 @@ p{
   font-size: 20px;
   font-family: fantasy;
 }
-.card {
-  background-color: #fff;
-  width: 680px;
-  height: 1280px;
-  border-radius: 6px;
-  box-shadow: 2px 0px 30px 0 rgba(0, 0, 0, 0.14);
-}
 
 .card-header {
-  background-color: #c95b0c;
+  background-color: #3d0212;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   color: #fff;
   padding-top: 100px;
-  padding-left: 170px;
+  padding-left: 270px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   position: relative;
+}
+
+.card-header1{
+  background-color: #fff;
 }
 
 </style>
